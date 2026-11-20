@@ -415,8 +415,8 @@ figcaption{font-size:10.5px;line-height:1.65;color:var(--muted);margin-top:9px;l
 .total .sub{font-size:10.5px;line-height:1.8;letter-spacing:.04em;color:var(--muted);text-align:right}
 .kit-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 
-.review-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(18px,3vw,32px);align-items:start}
-.review-lede{margin:0;font-family:var(--serif);font-size:clamp(18px,2.2vw,24px);line-height:1.5;color:var(--ink)}
+.review-top{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(14px,2vw,22px);align-items:start}
+.review-lede{margin:0;font-family:var(--serif);font-size:clamp(18px,2.2vw,24px);line-height:1.5;color:var(--ink);max-width:34em}
 .review-lede em{font-style:italic;color:var(--red)}
 .form{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px}
 .field{display:flex;flex-direction:column;gap:4px;min-width:0}
