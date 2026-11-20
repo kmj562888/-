@@ -90,9 +90,13 @@
 
   /* ---------------- nav highlight ---------------- */
 
-  var navLinks = $$('.nav a');
+  var navLinks = $$('.nav a').filter(function (link) {
+    var href = link.getAttribute('href') || '';
+    return href.indexOf('#') > -1;
+  });
   var sections = navLinks.map(function (link) {
-    return document.querySelector(link.getAttribute('href'));
+    var id = (link.getAttribute('href') || '').split('#').pop();
+    return id ? document.getElementById(id) : null;
   }).filter(Boolean);
 
   if ('IntersectionObserver' in window && sections.length) {
@@ -100,8 +104,8 @@
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
         navLinks.forEach(function (link) {
-          var on = link.getAttribute('href') === '#' + entry.target.id;
-          if (on) link.setAttribute('aria-current', 'true');
+          var id = (link.getAttribute('href') || '').split('#').pop();
+          if (id === entry.target.id) link.setAttribute('aria-current', 'true');
           else link.removeAttribute('aria-current');
         });
       });
