@@ -302,6 +302,7 @@ figcaption{font-size:10.5px;line-height:1.65;color:var(--muted);margin-top:9px;l
   display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px;
 }
 .day-route p{margin:0;font-size:11px;color:var(--muted);letter-spacing:.02em}
+.day-route .route-note{display:block;margin-top:5px;font-size:10px;letter-spacing:.06em;opacity:.72}
 .btn{
   display:inline-flex;align-items:center;gap:9px;
   padding:11px 18px;border:1px solid var(--ink);background:transparent;
