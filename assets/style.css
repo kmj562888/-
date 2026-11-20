@@ -93,7 +93,7 @@ button{cursor:pointer}
 
 .hero{
   position:relative;
-  min-height:min(94svh, 940px);
+  min-height:clamp(560px, 94svh, 940px);
   display:flex;flex-direction:column;justify-content:flex-end;
   color:#FBF8F2;overflow:hidden;
   background:var(--ink);
@@ -559,9 +559,9 @@ figcaption{font-size:10.5px;line-height:1.65;color:var(--muted);margin-top:9px;l
   .nav{width:100%;justify-content:space-between;gap:6px;margin-top:2px}
   .nav a{font-size:9px;letter-spacing:.14em;padding:5px 0}
 
-  .hero{min-height:82svh}
+  .hero{min-height:clamp(540px, 86svh, 760px)}
   .hero-top{font-size:8.5px;letter-spacing:.14em}
-  .hero h1{font-size:clamp(46px,14.6vw,86px)}
+  .hero h1{font-size:clamp(44px,13.6vw,86px)}
   .hero-sub{font-size:14px}
   .hero-sub .rule{width:20px;margin-right:8px}
   .hero-scroll{font-size:8.5px;letter-spacing:.16em}
