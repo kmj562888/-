@@ -202,6 +202,7 @@ figcaption{font-size:10.5px;line-height:1.65;color:var(--muted);margin-top:9px;l
 
 /* ---------- itinerary ---------- */
 
+.itinerary{max-width:1060px}
 .itinerary-head{
   display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:10px 20px;
   margin-bottom:clamp(20px,3vw,32px);
