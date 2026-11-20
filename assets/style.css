@@ -411,14 +411,14 @@ figcaption{font-size:10.5px;line-height:1.65;color:var(--muted);margin-top:9px;l
   margin-top:16px;padding-top:14px;border-top:1px solid var(--line-strong);
 }
 .total .sum{font-family:var(--serif);font-size:clamp(32px,5vw,46px);line-height:1;letter-spacing:-.02em}
-.total .sum small{font-family:var(--sans);font-size:11px;letter-spacing:.1em;color:var(--muted);margin-right:6px}
+.total .sum small{font-family:var(--sans);font-size:15px;letter-spacing:.04em;color:var(--muted);margin-right:6px;vertical-align:.15em}
 .total .sub{font-size:10.5px;line-height:1.8;letter-spacing:.04em;color:var(--muted);text-align:right}
 .kit-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 
 .review-top{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(14px,2vw,22px);align-items:start}
 .review-lede{margin:0;font-family:var(--serif);font-size:clamp(18px,2.2vw,24px);line-height:1.5;color:var(--ink);max-width:34em}
 .review-lede em{font-style:italic;color:var(--red)}
-.form{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;max-width:900px}
 .field{display:flex;flex-direction:column;gap:4px;min-width:0}
 .field--full{grid-column:1/-1}
 .field label{font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--olive)}
@@ -440,7 +440,8 @@ figcaption{font-size:10.5px;line-height:1.65;color:var(--muted);margin-top:9px;l
 .notecard img{width:100%;height:100%;object-fit:cover}
 .notecard .date{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
 .notecard h4{margin:3px 0 6px;font-size:16px;font-weight:600;line-height:1.4}
-.notecard p{margin:0;font-size:13px;line-height:1.85;color:var(--body);white-space:pre-wrap;overflow-wrap:anywhere}
+.notecard--text{grid-template-columns:minmax(0,1fr) auto}
+.notecard p{margin:0;font-size:13px;line-height:1.85;color:var(--body);white-space:pre-wrap;overflow-wrap:anywhere;max-width:64em}
 .notecard .del{
   border:0;background:none;padding:2px;font-size:10px;letter-spacing:.12em;
   text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line);

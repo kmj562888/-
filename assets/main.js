@@ -292,7 +292,7 @@
       }
       notes.forEach(function (note) {
         var card = document.createElement('article');
-        card.className = 'notecard';
+        card.className = note.photo ? 'notecard' : 'notecard notecard--text';
 
         if (note.photo) {
           var fig = document.createElement('figure');
