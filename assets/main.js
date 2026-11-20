@@ -307,7 +307,7 @@
         var del = document.createElement('button');
         del.className = 'del';
         del.type = 'button';
-        del.textContent = 'Delete';
+        del.textContent = '삭제';
         del.setAttribute('aria-label', (note.title || '기록') + ' 삭제');
         del.addEventListener('click', function () {
           notes = notes.filter(function (item) { return item.id !== note.id; });
