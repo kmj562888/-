@@ -220,6 +220,8 @@ figcaption{font-size:10.5px;line-height:1.65;color:var(--muted);margin-top:9px;l
 .daytab .n{font-family:var(--serif);font-size:12px;letter-spacing:.08em}
 .daytab .d{font-family:var(--serif);font-size:clamp(20px,2.6vw,30px);line-height:1;letter-spacing:-.01em}
 .daytab .s{font-size:9px;letter-spacing:.16em;text-transform:uppercase;margin-left:auto;padding-left:10px}
+.daytab + .daytab{border-left:1px solid var(--line);padding-left:clamp(12px,2.2vw,26px)}
+.daytab:first-child{padding-right:clamp(12px,2.2vw,26px)}
 .daytab:hover{color:var(--ink)}
 .daytab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--red)}
 .daytab[aria-selected="true"] .n{color:var(--red)}
