@@ -46,7 +46,7 @@ robots.txt
 - `-700.jpg`가 붙은 파일은 휴대폰용 작은 사본입니다. 큰 파일을 바꿨다면 작은 사본도 같은 내용으로 다시 만들어 주면 좋습니다(없어도 큰 파일이 대신 쓰입니다).
 - 사진을 바꾸면 ABOUT의 ‘Photo credits’에서 해당 사진 설명을 지우거나 내 사진이라고 적어 주세요.
 
-`assets/style.css`나 `assets/main.js`를 고쳤는데 화면이 그대로라면, `index.html` 위쪽의 `style.css?v=20261120j` / `main.js?v=20261120j`에서 `v=` 값을 다른 글자로 바꿔 주세요. 브라우저가 예전 파일을 기억하고 있을 때 새로 받아오게 하는 표시입니다.
+`assets/style.css`나 `assets/main.js`를 고쳤는데 화면이 그대로라면, `index.html` 위쪽의 `assets/style.css?v=...` / `assets/main.js?v=...`에서 `v=` 뒤의 값을 다른 글자로 바꿔 주세요. 브라우저가 예전 파일을 기억하고 있을 때 새로 받아오게 하는 표시입니다.
 
 ### 2. 일정·문구 고치기
 
