@@ -288,7 +288,7 @@ figcaption{font-size:10.5px;line-height:1.65;color:var(--muted);margin-top:9px;l
   font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);
   padding-top:3px;white-space:nowrap;
 }
-.note p{margin:0 0 7px;font-size:13px;line-height:1.88;color:var(--body)}
+.note p{margin:0 0 7px;font-size:13px;line-height:1.88;color:var(--body);max-width:70ch}
 .note p:last-child{margin-bottom:0}
 .note ul{margin:0;padding-left:15px}
 .note li{font-size:12.5px;line-height:1.85;color:var(--body);margin-bottom:3px}
@@ -301,7 +301,7 @@ figcaption{font-size:10.5px;line-height:1.65;color:var(--muted);margin-top:9px;l
 .btn{
   display:inline-flex;align-items:center;gap:9px;
   padding:11px 18px;border:1px solid var(--ink);background:transparent;
-  font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);
+  font-size:10px;letter-spacing:.1em;color:var(--ink);
   transition:background .22s var(--ease),color .22s var(--ease),border-color .22s var(--ease);
 }
 .btn:hover{background:var(--ink);color:var(--paper)}
