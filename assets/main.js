@@ -91,26 +91,39 @@
   /* ---------------- nav highlight ---------------- */
 
   var navLinks = $$('.nav a').filter(function (link) {
-    var href = link.getAttribute('href') || '';
-    return href.indexOf('#') > -1;
+    return (link.getAttribute('href') || '').indexOf('#') > -1;
   });
   var sections = navLinks.map(function (link) {
     var id = (link.getAttribute('href') || '').split('#').pop();
     return id ? document.getElementById(id) : null;
   }).filter(Boolean);
 
-  if ('IntersectionObserver' in window && sections.length) {
-    var navObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        navLinks.forEach(function (link) {
-          var id = (link.getAttribute('href') || '').split('#').pop();
-          if (id === entry.target.id) link.setAttribute('aria-current', 'true');
-          else link.removeAttribute('aria-current');
-        });
+  if (sections.length) {
+    var navTick = false;
+    var updateNav = function () {
+      navTick = false;
+      var marker = window.scrollY + window.innerHeight * 0.38;
+      var current = sections[0];
+      sections.forEach(function (section) {
+        if (section.offsetTop <= marker) current = section;
       });
-    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
-    sections.forEach(function (section) { navObserver.observe(section); });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8) {
+        current = sections[sections.length - 1];
+      }
+      navLinks.forEach(function (link) {
+        var id = (link.getAttribute('href') || '').split('#').pop();
+        if (current && id === current.id) link.setAttribute('aria-current', 'true');
+        else link.removeAttribute('aria-current');
+      });
+    };
+    var queueNav = function () {
+      if (navTick) return;
+      navTick = true;
+      window.requestAnimationFrame(updateNav);
+    };
+    updateNav();
+    window.addEventListener('scroll', queueNav, { passive: true });
+    window.addEventListener('resize', queueNav);
   }
 
   /* ---------------- checklist ---------------- */
