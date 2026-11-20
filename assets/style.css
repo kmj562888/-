@@ -483,7 +483,7 @@ figcaption{font-size:10.5px;line-height:1.65;color:var(--muted);margin-top:9px;l
   font-size:10.5px;line-height:1.6;color:var(--muted);
 }
 .credits .c{min-width:0}
-.h-latin{font-style:italic;margin-right:.22em;letter-spacing:0}
+.h-latin{font-style:italic;margin-right:.12em;letter-spacing:0}
 .credits li a{border-bottom:1px solid var(--line);color:var(--body)}
 .credits li a:hover{border-bottom-color:var(--red);color:var(--red)}
 .credits .lic{white-space:nowrap;letter-spacing:.06em}
