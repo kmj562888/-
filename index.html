@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#17708A">
+<title>다카마쓰 1박 2일 · 2026.11.26–27</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* 폰 우선 여행 노트. 상단 요약 → 일자별 타임라인 → 하단 4탭(동선/위시/쿠폰·티켓/준비·회화) */
+:root {
+  --bg: #F5F3EC;
+  --surface: #FFFDF8;
+  --fg: #12262B;
+  --muted: #5B6F73;
+  --line: #DCD8CB;
+  --soft: #E9EADF;
+  --accent: #17708A;
+  --accent-ink: #FFFFFF;
+  --olive: #5F7126;
+  --warn: #9A5208;
+  --font-body: "Noto Sans KR", system-ui, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-display: "Black Han Sans", "Noto Sans KR", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1A1D; --surface: #16262A; --fg: #E6F0EF; --muted: #9DB2B4; --line: #274046; --soft: #1D3237;
+    --accent: #5CC0DA; --accent-ink: #06222B; --olive: #A9C05A; --warn: #F0A860; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1A1D; --surface: #16262A; --fg: #E6F0EF; --muted: #9DB2B4; --line: #274046; --soft: #1D3237;
+  --accent: #5CC0DA; --accent-ink: #06222B; --olive: #A9C05A; --warn: #F0A860; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 14px; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 15px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 92px; -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 560px; margin: 0 auto; }
+a { color: var(--accent); }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+header.top { padding: 18px 0 10px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; color: var(--muted); font-weight: 500; }
+.themeBtn {
+  flex: none; width: 38px; height: 38px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface);
+  display: grid; place-items: center; font-size: 16px; line-height: 1; cursor: pointer;
+}
+h1 { font-family: var(--font-display); font-weight: 400; font-size: 34px; line-height: 1.15; margin: 6px 0 8px; text-wrap: balance; }
+.badges { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 10px; }
+.badge { font-size: 11.5px; font-weight: 700; padding: 3px 10px; border-radius: 999px; background: var(--accent); color: var(--accent-ink); }
+.badge.olive { background: var(--olive); color: #FFFDF8; }
+.flight { display: flex; gap: 4px 14px; align-items: center; flex-wrap: wrap; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.flight b { color: var(--fg); font-weight: 700; }
+
+.jump { display: flex; gap: 6px; flex-wrap: wrap; margin: 14px 0 12px; }
+.jump button {
+  border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 7px 14px;
+  font-size: 13px; font-weight: 700; cursor: pointer;
+}
+.jump button:active { background: var(--soft); }
+.prog { margin: 0 0 6px; }
+.progtxt { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-bottom: 5px; font-variant-numeric: tabular-nums; }
+.bar { height: 7px; border-radius: 999px; background: var(--soft); overflow: hidden; }
+.bar i { display: block; height: 100%; width: 0; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--olive)); transition: width .35s ease; }
+
+section.view { display: none; }
+section.view.on { display: block; }
+h2 { font-family: var(--font-display); font-weight: 400; font-size: 22px; margin: 30px 0 4px; scroll-margin-top: 12px; }
+.sub { color: var(--muted); font-size: 13px; margin: 0 0 14px; }
+
+.box { background: var(--soft); border-radius: 12px; padding: 14px 16px; margin: 6px 0 4px; font-size: 14px; }
+.box h3 { margin: 0 0 8px; font-size: 14px; }
+.box ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
+.box p { margin: 0 0 6px; }
+.box p:last-child { margin: 0; }
+
+ol.tl { list-style: none; margin: 0; padding: 0; position: relative; }
+ol.tl::before { content: ""; position: absolute; left: 56px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
+li.stop { display: grid; grid-template-columns: 48px 1fr; gap: 0 22px; position: relative; padding-bottom: 14px; min-width: 0; }
+.time { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 14px; padding-top: 14px; text-align: right; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; position: relative; min-width: 0; }
+.card::before { content: ""; position: absolute; left: -17px; top: 19px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg); }
+li.stop.done .card { opacity: .55; }
+li.stop.done .card::before { background: var(--olive); }
+.card h4 { margin: 0; font-size: 16px; line-height: 1.35; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.jp { font-size: 12px; color: var(--muted); font-weight: 400; }
+.meta { display: flex; gap: 6px; flex-wrap: wrap; margin: 8px 0 0; }
+.pill { font-size: 11.5px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); font-variant-numeric: tabular-nums; }
+.pill.eat { color: var(--warn); border-color: currentColor; }
+.pill.see { color: var(--accent); border-color: currentColor; }
+.pill.shop { color: var(--olive); border-color: currentColor; }
+.note { margin: 8px 0 0; font-size: 13.5px; }
+.actions { display: flex; gap: 16px; margin-top: 10px; font-size: 13px; flex-wrap: wrap; }
+.actions button, .actions a { background: none; border: 0; padding: 4px 0; color: var(--accent); cursor: pointer; text-decoration: none; font-weight: 600; }
+li.leg { display: block; padding-bottom: 0; }
+li.leg .legtxt { margin-left: 70px; padding: 2px 0 14px 14px; font-size: 12.5px; color: var(--muted); }
+
+.sources { font-size: 12.5px; color: var(--muted); margin-top: 28px; }
+.sources ul { padding-left: 18px; margin: 6px 0 0; display: flex; flex-direction: column; gap: 4px; }
+
+.chips { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 14px; }
+.chip { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 5px 12px; font-size: 13px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+form.add { display: grid; gap: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px; margin-bottom: 16px; }
+form.add .row { display: grid; grid-template-columns: 1fr; gap: 8px; }
+@media (min-width: 440px) { form.add .row { grid-template-columns: 1fr 1fr; } }
+input[type=text], input[type=date], select {
+  width: 100%; min-width: 0; font: inherit; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px;
+}
+label.f { font-size: 12px; color: var(--muted); display: grid; gap: 4px; }
+.btn { background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 8px; padding: 11px 14px; font-weight: 700; cursor: pointer; }
+ul.items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+li.item { display: grid; grid-template-columns: 26px 1fr auto; gap: 10px; align-items: start; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; min-width: 0; }
+li.item input[type=checkbox] { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--olive); }
+li.item .t { font-weight: 500; overflow-wrap: anywhere; }
+li.item.got .t { text-decoration: line-through; color: var(--muted); }
+li.item .w { font-size: 12.5px; color: var(--muted); }
+.x { background: none; border: 0; color: var(--muted); cursor: pointer; padding: 2px 6px; font-size: 18px; line-height: 1; }
+.empty { color: var(--muted); font-size: 14px; padding: 18px 0; text-align: center; }
+
+ul.tickets { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+li.ticket { display: grid; grid-template-columns: 1fr; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; min-width: 0; }
+li.ticket .main { padding: 14px 16px; border-bottom: 2px dashed var(--line); min-width: 0; }
+li.ticket .stub { padding: 10px 16px; display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+li.ticket .big { font-family: var(--font-display); font-size: 21px; line-height: 1.25; color: var(--accent); margin: 2px 0 4px; }
+li.ticket .where { font-size: 12px; color: var(--muted); }
+li.ticket.used { opacity: .55; }
+li.ticket.used .big { text-decoration: line-through; }
+li.ticket p { margin: 6px 0 0; font-size: 13.5px; overflow-wrap: anywhere; }
+
+ul.links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+li.linkcard { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 13px 15px; min-width: 0; }
+li.linkcard .lkt { font-weight: 700; font-size: 14.5px; display: flex; gap: 7px; align-items: baseline; flex-wrap: wrap; }
+li.linkcard .lks { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+li.linkcard a { display: inline-block; margin-top: 7px; font-size: 13px; font-weight: 700; text-decoration: none; }
+li.linkcard a::after { content: " ↗"; font-weight: 400; }
+
+.phr { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; }
+.phr .tag2 { font-size: 11px; color: var(--accent); border: 1px solid currentColor; border-radius: 999px; padding: 1px 7px; display: inline-block; margin-bottom: 6px; }
+.phr .jp2 { font-size: 16.5px; font-weight: 700; line-height: 1.4; word-break: keep-all; }
+.phr .ko2 { font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+.pbtns { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+.pbtns button { border: 1px solid var(--line); background: var(--bg); border-radius: 8px; padding: 7px 12px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.pbtns button.copied { background: var(--olive); border-color: var(--olive); color: #FFFDF8; }
+
+.big { position: fixed; inset: 0; z-index: 60; display: none; place-items: center; padding: 26px; background: rgba(8,22,26,.88); text-align: center; }
+.big.on { display: grid; }
+.big .bigjp { color: #fff; font-size: 40px; line-height: 1.35; font-weight: 700; word-break: keep-all; }
+.big .bigko { color: #CFE3E6; font-size: 15px; margin-top: 16px; }
+.big button { margin-top: 28px; background: #FFFDF8; color: #0E1A1D; border: 0; border-radius: 10px; padding: 13px 24px; font-weight: 700; font-size: 15px; cursor: pointer; }
+
+nav.tabs {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; background: var(--surface); border-top: 1px solid var(--line);
+  padding: 6px max(8px, env(safe-area-inset-right, 0px)) calc(6px + env(safe-area-inset-bottom, 0px)) max(8px, env(safe-area-inset-left, 0px));
+  display: flex; justify-content: center;
+}
+nav.tabs .in { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; width: 100%; max-width: 560px; }
+nav.tabs a { text-align: center; text-decoration: none; color: var(--muted); font-size: 12px; font-weight: 600; padding: 7px 2px; border-radius: 8px; display: grid; gap: 2px; justify-items: center; }
+nav.tabs a svg { width: 21px; height: 21px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+nav.tabs a[aria-current="page"] { color: var(--accent); background: var(--soft); }
+@media (prefers-reduced-motion: no-preference) { li.stop .card { transition: opacity .2s; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="topbar">
+      <div class="eyebrow">11/26(목) – 11/27(금) · 가가와현</div>
+      <button class="themeBtn" id="themeBtn" type="button" aria-label="다크 모드로 바꾸기" title="테마 바꾸기">☾</button>
+    </div>
+    <h1>다카마쓰 2일</h1>
+    <div class="badges">
+      <span class="badge">에어서울 RS297</span>
+      <span class="badge olive">단풍 라이트업 시즌</span>
+    </div>
+    <div class="flight">
+      <span>가는 편 <b>RS297</b> ICN 08:45 → TAK 10:30</span>
+      <span>오는 편 TAK <b>16:50</b> · 공항 도착 <b>14:50</b></span>
+    </div>
+
+    <div class="jump" role="group" aria-label="빠른 이동">
+      <button type="button" data-jump="day1">Day 1</button>
+      <button type="button" data-jump="day2">Day 2</button>
+      <button type="button" data-jump="planb">플랜 B</button>
+    </div>
+
+    <div class="prog" aria-live="polite">
+      <div class="progtxt"><span id="progLabel">0/16 완료</span><span id="progPct">0%</span></div>
+      <div class="bar"><i id="progFill"></i></div>
+    </div>
+  </header>
+
+  <section class="view" id="v-route" aria-label="동선">
+    <div class="box">
+      <h3>이번 동선 요약</h3>
+      <ul>
+        <li>처음 목록의 장소를 전부 넣었어요. 리쓰린 공원은 1일차 밤 라이트업(11/20~29)과 2일차 낮, 두 번이에요.</li>
+        <li>쇼도시마는 도노쇼항 대신 이케다항으로 들어가요. 올리브 공원과 마루킨이 둘 다 가까워서 이 길이 더 빨라요. 고속선은 2026년 5월부터 감편이라 쓰지 않았어요.</li>
+        <li>우동보는 1일차 점심 대신 2일차 점심(금 11:00~14:30)으로 옮겼어요.</li>
+        <li>공항 리무진은 2026년 10월 인상으로 효고마치·다카마쓰역 <b>¥1,300</b>이에요. 스이카·컨택리스 카드도 돼요.</li>
+      </ul>
+    </div>
+    <div class="box" style="margin-top:10px" id="j-planb">
+      <h3>12:10 페리를 놓치면 (플랜 B)</h3>
+      <ul>
+        <li>다음 배는 14:10 출발, 15:10 이케다항 도착이에요. 이때는 올리브 공원만 가고 마루킨은 빼요.</li>
+        <li>돌아오는 배는 18:00 출발, 19:00 도착이라 리쓰린은 19:20쯤 도착해서 1시간 보면 돼요.</li>
+      </ul>
+    </div>
+
+    <h2 id="j-day1">Day 1 · 11/26 목</h2>
+    <p class="sub">공항 → 쇼도시마 → 리쓰린 야경 → 저녁·쇼핑</p>
+    <ol class="tl" id="day1"></ol>
+
+    <h2 id="j-day2">Day 2 · 11/27 금</h2>
+    <p class="sub">아침 우동 → 리쓰린 → 점심·쇼핑 → 공항</p>
+    <ol class="tl" id="day2"></ol>
+
+    <div class="sources">
+      시간은 모두 예상이고, 영업시간·요금은 2026년 11월 공식 사이트 기준이에요. 출발 전 구글맵으로 한 번 더 확인하세요.
+      <ul>
+        <li><a href="https://ryobi-shodoshima.jp/timetable/timetable_takamatsu/" target="_blank" rel="noopener">국제 료비 페리 다카마쓰 ⇄ 이케다 시간표·요금</a></li>
+        <li><a href="https://www.kotoden.co.jp/publichtm/bus/limousine/index.html" target="_blank" rel="noopener">고토덴 공항 리무진 (요금·시간표)</a></li>
+        <li><a href="https://www.pref.kagawa.lg.jp/ritsurin/r8_a_lightup.html" target="_blank" rel="noopener">리쓰린 공원 가을 라이트업 2026 (가가와현)</a></li>
+        <li><a href="https://ritsuringarden.com/ritsurin/" target="_blank" rel="noopener">리쓰린 공원 개원시간·입장료</a></li>
+        <li><a href="https://www.olive-pk.jp/" target="_blank" rel="noopener">쇼도시마 올리브 공원</a></li>
+        <li><a href="https://marukin.moritakk.com/kinenkan/" target="_blank" rel="noopener">마루킨 간장 기념관</a></li>
+        <li><a href="https://ikkaku.co.jp/takamatsu/info.html" target="_blank" rel="noopener">잇카쿠 다카마쓰 점</a></li>
+        <li><a href="https://www.my-kagawa.jp/udon/2914/" target="_blank" rel="noopener">우동보 본점</a> · <a href="https://www.my-kagawa.jp/udon/565/" target="_blank" rel="noopener">우에하라야 본점</a></li>
+        <li><a href="https://www.2chou.jp/news/ritsurin-kikugetsu/" target="_blank" rel="noopener">기쿠게쓰테이 입정료 (2025.6 개정)</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="view" id="v-wish" aria-label="위시리스트">
+    <h2>위시리스트</h2>
+    <p class="sub">사고 싶은 것을 적고 어디서 살지 고르면 그 시간대가 같이 보여요. 아래 목록은 예시라서 지우고 바꿔도 돼요.</p>
+    <form class="add" id="wishForm">
+      <label class="f" for="wText">사고 싶은 것
+        <input type="text" id="wText" placeholder="예: 올리브 핸드크림" maxlength="60" required>
+      </label>
+      <div class="row">
+        <label class="f" for="wWhere">살 곳
+          <select id="wWhere"></select>
+        </label>
+        <label class="f" for="wMemo">메모
+          <input type="text" id="wMemo" placeholder="수량, 가격 등" maxlength="60">
+        </label>
+      </div>
+      <button class="btn" type="submit">추가</button>
+    </form>
+    <div class="chips" id="wishChips" role="group" aria-label="살 곳 필터"></div>
+    <ul class="items" id="wishList"></ul>
+  </section>
+
+  <section class="view" id="v-coupon" aria-label="쿠폰·티켓">
+    <h2>바로가기</h2>
+    <p class="sub">출발 전에 미리 열어 두면 좋은 공식 페이지예요.</p>
+    <ul class="links">
+      <li class="linkcard">
+        <div class="lkt">비짓재팬웹 <span class="jp">Visit Japan Web</span></div>
+        <div class="lks">여권·항공편·숙박 정보를 미리 등록하고 QR을 저장해요. 입국심사와 세관을 한 번에 지나가요. 출발 2주 전부터 등록 가능.</div>
+        <a href="https://vjw.digital.go.jp/" target="_blank" rel="noopener">공식 사이트 열기</a>
+      </li>
+      <li class="linkcard">
+        <div class="lkt">에어서울 온라인 체크인</div>
+        <div class="lks">국제선은 출발 24시간 전 ~ 1시간 30분 전. 예약번호 + 여권 영문 이름. 위탁 짐이 있으면 카운터는 들러야 해요.</div>
+        <a href="https://flyairseoul.com/CW/ko/main.do" target="_blank" rel="noopener">에어서울 열기</a>
+      </li>
+      <li class="linkcard">
+        <div class="lkt">고토덴 공항 리무진 <span class="jp">ことでんバス</span></div>
+        <div class="lks">국제선 도착 약 45분 뒤 출발 · 전석 자유석 · 예약 없이. 효고마치·다카마쓰역 ¥1,300 / 가와라마치·리쓰린공원앞 ¥1,000. 10/25~11/30 시간표는 페이지에서 PDF로 열려요.</div>
+        <a href="https://www.kotoden.co.jp/publichtm/bus/limousine/index.html" target="_blank" rel="noopener">공식 시간표·요금 열기</a>
+      </li>
+      <li class="linkcard">
+        <div class="lkt">국제 료비 페리 <span class="jp">高松 ⇄ 池田</span></div>
+        <div class="lks">다카마쓰 12:10 → 이케다 13:10 / 이케다 16:25 → 다카마쓰 17:25. 약 60분, 편도 ¥700 · 왕복 ¥1,330.</div>
+        <a href="https://ryobi-shodoshima.jp/timetable/timetable_takamatsu/" target="_blank" rel="noopener">페리 시간표 열기</a>
+      </li>
+      <li class="linkcard">
+        <div class="lkt">리쓰린 공원 라이트업·야간 와선</div>
+        <div class="lks">11/20~11/29 17:00~21:00(입장 20:30까지) · 입장 ¥500. 남호 야간 와선 ¥850은 17:30부터 15분 간격 11편, 웹 예약(당일 예약 불가 · 잔여석은 현장 판매).</div>
+        <a href="https://www.pref.kagawa.lg.jp/ritsurin/r8_a_lightup.html" target="_blank" rel="noopener">라이트업 안내 열기</a>
+        <a href="https://www.my-kagawa.jp/ritsuringarden/wasen/reserve" target="_blank" rel="noopener">와선 예약 열기</a>
+      </li>
+    </ul>
+
+    <h2>쿠폰·티켓</h2>
+    <p class="sub">쓰기 전에 화면을 열어 보여주기만 하면 되게 모아뒀어요. 직접 추가도 돼요.</p>
+    <ul class="tickets" id="couponList"></ul>
+    <h2>쿠폰 추가</h2>
+    <form class="add" id="couponForm">
+      <label class="f" for="cTitle">혜택
+        <input type="text" id="cTitle" placeholder="예: 음료 1잔 무료" maxlength="60" required>
+      </label>
+      <div class="row">
+        <label class="f" for="cWhere">쓸 곳
+          <input type="text" id="cWhere" placeholder="가게 이름" maxlength="60">
+        </label>
+        <label class="f" for="cDate">기한
+          <input type="date" id="cDate">
+        </label>
+      </div>
+      <label class="f" for="cMemo">조건·메모
+        <input type="text" id="cMemo" placeholder="화면 제시, 여권 지참 등" maxlength="120">
+      </label>
+      <button class="btn" type="submit">추가</button>
+    </form>
+  </section>
+
+  <section class="view" id="v-prep" aria-label="준비·회화">
+    <h2>현금 준비</h2>
+    <div class="box">
+      <h3>1인 ¥10,000 한 장이면 충분해요</h3>
+      <ul>
+        <li><b>현금이 편한 곳</b> — 우동집 세 곳(우동보·바카이치다이·우에하라야 · 합쳐 ¥2,500쯤), 섬 버스·택시, 간식·가샤폰·코인라커.</li>
+        <li><b>카드·IC 되는 곳</b> — 잇카쿠, 신묘 세이니쿠텐, 돈키호테, 편의점, 공항 리무진(스이카·컨택리스), 페리 창구.</li>
+        <li><b>모자라면</b> — 공항과 편의점 ATM에서 트래블카드로 바로 인출. 동전이 많이 나오니 동전지갑 하나 챙기세요.</li>
+      </ul>
+    </div>
+
+    <h2>준비물 체크</h2>
+    <p class="sub">누르면 체크돼요. 이 폰에만 저장돼요.</p>
+    <ul class="items" id="prepList"></ul>
+
+    <h2>일본어 한마디</h2>
+    <p class="sub">복사해서 보여주거나, 택시 기사님께는 <b>크게 보기</b>로 띄우세요.</p>
+    <div id="phraseList"></div>
+
+    <div class="sources" style="margin-top:22px">
+      이 페이지에는 예약번호·숙소·개인 정보가 들어 있지 않아요. 링크로만 친구와 공유하세요.
+    </div>
+  </section>
+</div>
+
+<div class="big" id="bigModal" role="dialog" aria-modal="true" aria-label="크게 보기">
+  <div>
+    <div class="bigjp" id="bigJp"></div>
+    <div class="bigko" id="bigKo"></div>
+    <button type="button" id="bigClose">닫기</button>
+  </div>
+</div>
+
+<nav class="tabs" aria-label="페이지">
+  <div class="in">
+    <a href="#route" data-tab="route">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg>동선
+    </a>
+    <a href="#wish" data-tab="wish">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l-1.2 12H6.2L5 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>위시
+    </a>
+    <a href="#coupon" data-tab="coupon">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8a2 2 0 0 0 0 4v0a2 2 0 0 1 0 4v1h16v-1a2 2 0 0 1 0-4v0a2 2 0 0 0 0-4V7H4v1z"/><path d="M14 7v10" stroke-dasharray="2 2"/></svg>쿠폰·티켓
+    </a>
+    <a href="#prep" data-tab="prep">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h9a2 2 0 0 1 2 2v12H6a2 2 0 0 1-2-2V5z"/><path d="M15 9h3a2 2 0 0 1 2 2v8h-5"/><path d="M7 9h5M7 13h5"/></svg>준비·회화
+    </a>
+  </div>
+</nav>
+
+<script>
+(function () {
+  "use strict";
+  var KIND = { eat: "식사", see: "관광", shop: "쇼핑", move: "이동" };
+  var DAY1 = [
+    { id: "a1", t: "10:30", name: "다카마쓰 공항 도착", jp: "高松空港", kind: "move",
+      hours: "국제선 리무진은 도착 약 45분 뒤",
+      note: "RS297 10:30 도착. 입국·수하물 찾고 2번 승강장으로 나가면 11:15쯤 리무진이 와요. 표는 입국장 키오스크(한국어 가능)에서 사거나 하차할 때 스이카·컨택리스로 태그해요." },
+    { leg: "공항 리무진 약 40분 · ¥1,300 · 「兵庫町」 하차 (예약 없이 선착순)" },
+    { id: "a2", t: "11:55", name: "다카마쓰항 페리 승강장", jp: "高松港 フェリーターミナル", kind: "move",
+      hours: "료비 페리 창구 · 카드·IC 가능",
+      note: "이케다행 왕복권 ¥1,330을 사요. 편도 두 번(¥1,400)보다 ¥70 싸요. 12:10 배를 타면 13:10 이케다항 도착. 놓치면 위의 플랜 B예요." },
+    { leg: "국제 료비 페리 60분 · 12:10 → 13:10 이케다항" },
+    { id: "a3", t: "13:25", name: "올리브 공원", jp: "道の駅 小豆島オリーブ公園", kind: "shop",
+      hours: "8:30~17:00 · 연중무휴 · 입장 무료",
+      note: "이케다항에서 택시 10~15분이에요. 항구 앞에서 바로 타거나 미리 전화해 두세요. 레스토랑 올리바스는 라스트오더가 일찍 끝나니 도착하면 점심부터 챙겨요. 그리스 풍차 사진, 올리브 소프트(¥250), 올리브오일 쇼핑까지 1시간 남짓." },
+    { leg: "택시 10~15분" },
+    { id: "a4", t: "14:50", name: "마루킨 간장 기념관", jp: "マルキン醤油記念館", kind: "see",
+      hours: "9:00~16:30 (10/16~11/30 연장) · 11월 휴관 없음",
+      note: "입관 ¥500(중학생 이상). 간장 소프트아이스 ¥300~350. 16:30 마감이니 45분 정도 봐요. 옛 간장 창고를 그대로 쓴 전시장이라 목재 냄새부터 좋아요." },
+    { leg: "택시 약 15분 · 이케다항 16:00 도착 목표" },
+    { id: "a5", t: "16:25", name: "이케다항 출발 페리", jp: "池田港 → 高松港", kind: "move",
+      hours: "16:25 → 17:25 · 다음 배 18:00",
+      note: "16:25 출발, 17:25 다카마쓰항 도착. 다음 배는 18:00이라 이것만 놓쳐도 리쓰린은 볼 수 있어요. 택시 배차가 늦으면 올리브 공원 출발을 앞당겨요." },
+    { leg: "택시 약 10분 · 다카마쓰항 → 리쓰린 공원" },
+    { id: "a6", t: "17:45", name: "리쓰린 공원 라이트업", jp: "栗林公園", kind: "see",
+      hours: "11/20~11/29 17:00~21:00 · 입장 20:30까지 · ¥500",
+      note: "2026년 가을 라이트업이 11/20~29라서 이 날이 딱 맞아요. 입장료는 성인 ¥500으로 확정(2025.6 인상, 라이트업 기간도 동일). 남호 단풍이 물에 비치는 6개 포인트를 1시간 정도 봐요. 야간 와선은 ¥850(17:30부터 15분 간격 막배 20:00)이고 웹 예약제라 당일 예약은 안 돼요 — 잔여석이 있으면 현장에서 탈 수 있어요." },
+    { leg: "택시 약 15분 · 리쓰린 → 잇카쿠" },
+    { id: "a7", t: "19:20", name: "잇카쿠 다카마쓰 점", jp: "一鶴 高松店", kind: "eat",
+      hours: "목 17:00~23:00 (L.O. 22:30) · 화요일 휴무",
+      note: "오야도리(쫄깃)와 히나도리(부드러움)를 하나씩 시켜 비교해요. 줄이 길어서 도착하자마자 이름부터 적고, 밥은 주먹밥에 국물을 말아 먹는 게 현지 방식이에요." },
+    { leg: "도보 10~15분" },
+    { id: "a8", t: "20:35", name: "신묘 세이니쿠텐 카지야마치 점", jp: "しんみょう精肉店 鍛冶屋町店", kind: "eat",
+      hours: "16:00~24:00 (L.O. 23:30) · 연중무휴",
+      note: "정육점이 운영하는 야키니쿠·호르몬집이에요. 명물 시로·아카와 야미츠키 탄이 인기. 잇카쿠 뒤라서 2차로 가볍게 먹기 좋아요." },
+    { leg: "도보 약 10분 · 마루가메마치 아케이드를 지나서" },
+    { id: "a9", t: "22:00", name: "돈키호테 다카마쓰 마루가메초 점", jp: "ドン・キホーテ高松丸亀町店", kind: "shop",
+      hours: "9:00~24:00",
+      note: "여권을 챙겨 면세 10%를 받고, 쿠폰 탭의 화면을 보여주세요. 위시리스트 쇼핑이 메인이에요. 24:00 마감이니 23:30에는 계산하세요." }
+  ];
+  var DAY2 = [
+    { id: "b1", t: "07:00", name: "우동 바카이치다이", jp: "手打十段 うどんバカ一代", kind: "eat",
+      hours: "6:00~18:00 · 현금만",
+      note: "대표 메뉴는 가마버터우동이에요. 소(1玉)도 양이 있으니 중(2玉)은 배고플 때만. 줄이 생기는 집이라 일찍 가요." },
+    { leg: "택시 또는 코토덴 10~15분" },
+    { id: "b2", t: "08:15", name: "리쓰린 공원", jp: "栗林公園", kind: "see",
+      hours: "11월 6:30~17:00 · 연중무휴 · ¥500",
+      note: "전날 밤 라이트업에 이어 이번에는 낮 단풍을 봐요. 입장권은 동문 매표소에서 사고, 남호 쪽으로 돌면 사진 찍기 좋은 자리가 이어져요." },
+    { id: "b3", t: "09:00", name: "기쿠게쓰테이", jp: "掬月亭", kind: "see",
+      hours: "9:00~16:30 (접수 16:00)",
+      note: "공원 안 찻집이에요. 말차·과자 세트 ¥800, 센차·과자 세트 ¥600(2025.6 개정). 공원 입장료는 따로예요. 난코를 바라보며 쉬어가요." },
+    { leg: "동문으로 나와 도보 7~10분" },
+    { id: "b4", t: "09:50", name: "사누키 우동 우에하라야 본점", jp: "讃岐うどん 上原屋本店", kind: "eat",
+      hours: "9:30~14:30 (면 떨어지면 조기 마감) · 일요일 휴무",
+      note: "리쓰린 공원 서쪽 栗林町에 있는 셀프 우동집이에요. かけ小 ¥350부터. 오픈 직후가 줄이 짧고, 뒤에 우동이 하나 더 있으니 작은 사이즈로 드세요." },
+    { leg: "택시 약 10분" },
+    { id: "b5", t: "11:15", name: "우동보 다카마쓰 본점", jp: "うどん棒 高松本店", kind: "eat",
+      hours: "금 11:00~14:30 · 17:00~19:30 · 화·수 휴무",
+      note: "메뉴가 다양한 일반 우동집이에요. 가와라마치역에서 도보 5분. 11/27은 금요일이라 저녁 영업도 해요. 배가 부르면 반 그릇이나 사이드만 시켜도 돼요." },
+    { leg: "도보 약 10분" },
+    { id: "b6", t: "12:15", name: "마루가메마치 상점가", jp: "丸亀町商店街", kind: "see",
+      hours: "가게별 상이 · 대개 10:00~20:00",
+      note: "낮에는 가게가 다 열려 있어서 구경하기 좋아요. 마루가메마치 그린 동관 1F에 포켓몬 센터 카가와(10:00~20:00)가 있어서 야돈 굿즈도 볼 수 있어요. 13:00까지 보고, 위시리스트에서 못 산 것을 챙겨요." },
+    { leg: "13:10 兵庫町 정류장에서 공항 리무진 약 40분 · ¥1,300 (놓치면 택시 ¥5,000~7,000)" },
+    { id: "b7", t: "13:50", name: "다카마쓰 공항 도착", jp: "高松空港", kind: "move",
+      note: "귀국편 16:50이라 14:50까지 도착하면 돼요. 한 시간 가까이 여유가 있어서 버스를 한 대 놓쳐도 괜찮아요. 늦어도 14:00 전에는 버스를 타세요." }
+  ];
+
+  function lsGet(k, def) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : def; } catch (e) { return def; } }
+  function lsSet(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+
+  var done = lsGet("tak2-done", {});
+
+  function renderDay(el, list) {
+    var h = "";
+    list.forEach(function (s) {
+      if (s.leg) { h += '<li class="leg"><div class="legtxt">' + esc(s.leg) + '</div></li>'; return; }
+      var isDone = !!done[s.id];
+      h += '<li class="stop' + (isDone ? " done" : "") + '"><div class="time">' + esc(s.t) + '</div>' +
+        '<div class="card"><h4>' + esc(s.name) + ' <span class="jp">' + esc(s.jp) + '</span></h4>' +
+        '<div class="meta"><span class="pill ' + (s.kind === "move" ? "" : s.kind) + '">' + KIND[s.kind] + '</span>' +
+        (s.hours ? '<span class="pill">' + esc(s.hours) + '</span>' : "") + '</div>' +
+        '<p class="note">' + esc(s.note) + '</p>' +
+        '<div class="actions"><a href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(s.jp) + '" target="_blank" rel="noopener">구글맵 열기</a>' +
+        '<button type="button" data-done="' + s.id + '" aria-pressed="' + isDone + '">' + (isDone ? "다녀옴 취소" : "다녀옴") + '</button></div></div></li>';
+    });
+    el.innerHTML = h;
+  }
+
+  var STOP_IDS = DAY1.concat(DAY2).filter(function (s) { return s.id; }).map(function (s) { return s.id; });
+
+  function renderProgress() {
+    var total = STOP_IDS.length, n = 0;
+    STOP_IDS.forEach(function (id) { if (done[id]) n++; });
+    var pct = total ? Math.round((n / total) * 100) : 0;
+    var label = document.getElementById("progLabel");
+    var fill = document.getElementById("progFill");
+    if (label) label.textContent = n + "/" + total + " 완료";
+    var pctEl = document.getElementById("progPct");
+    if (pctEl) pctEl.textContent = pct + "%";
+    if (fill) fill.style.width = pct + "%";
+  }
+
+  function renderRoute() {
+    renderDay(document.getElementById("day1"), DAY1);
+    renderDay(document.getElementById("day2"), DAY2);
+    renderProgress();
+  }
+
+  document.getElementById("v-route").addEventListener("click", function (e) {
+    var b = e.target.closest ? e.target.closest("button[data-done]") : null;
+    if (!b) return;
+    var id = b.getAttribute("data-done");
+    if (done[id]) delete done[id]; else done[id] = 1;
+    lsSet("tak2-done", done);
+    renderRoute();
+  });
+
+  /* 빠른 이동 */
+  var pendingJump = null;
+  function doJump() {
+    if (!pendingJump) return;
+    var el = document.getElementById("j-" + pendingJump);
+    pendingJump = null;
+    if (!el) return;
+    var y = el.getBoundingClientRect().top + window.pageYOffset - 14;
+    try { window.scrollTo({ top: y, behavior: "smooth" }); } catch (err) { window.scrollTo(0, y); }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll("[data-jump]"), function (b) {
+    b.addEventListener("click", function () {
+      pendingJump = b.getAttribute("data-jump");
+      if ((location.hash || "#route") !== "#route") { location.hash = "#route"; }
+      else { doJump(); }
+    });
+  });
+
+  /* 테마 */
+  var themeBtn = document.getElementById("themeBtn");
+  function isDark() {
+    var t = document.documentElement.getAttribute("data-theme");
+    if (t === "dark") return true;
+    if (t === "light") return false;
+    return !!(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  }
+  function paintThemeBtn() {
+    var d = isDark();
+    themeBtn.textContent = d ? "☀" : "☾";
+    themeBtn.setAttribute("aria-label", d ? "라이트 모드로 바꾸기" : "다크 모드로 바꾸기");
+  }
+  var savedTheme = lsGet("tak2-theme", null);
+  if (savedTheme === "dark" || savedTheme === "light") document.documentElement.setAttribute("data-theme", savedTheme);
+  themeBtn.addEventListener("click", function () {
+    var next = isDark() ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    lsSet("tak2-theme", next);
+    paintThemeBtn();
+  });
+  paintThemeBtn();
+
+  /* 위시리스트 */
+  var WHERE = {
+    olive: { label: "올리브 공원", when: "Day 1 · 13:25 (17:00 마감)" },
+    marukin: { label: "마루킨 기념관", when: "Day 1 · 14:50 (16:30 마감)" },
+    donki: { label: "돈키호테", when: "Day 1 · 22:00 (24:00까지)" },
+    arcade: { label: "마루가메마치", when: "Day 2 · 12:15 (낮 영업)" },
+    airport: { label: "공항", when: "Day 2 · 출국 전" },
+    etc: { label: "기타", when: "" }
+  };
+  var wishSeed = [
+    { id: "w1", text: "올리브오일", where: "olive", memo: "예시", got: false },
+    { id: "w2", text: "올리브 핸드크림", where: "olive", memo: "예시", got: false },
+    { id: "w3", text: "간장 (작은 병)", where: "marukin", memo: "예시", got: false },
+    { id: "w4", text: "일본 과자·화장품", where: "donki", memo: "예시", got: false },
+    { id: "w5", text: "사누키 우동 면 세트", where: "arcade", memo: "예시", got: false }
+  ];
+  var wish = lsGet("tak2-wish", wishSeed);
+  var filter = "all";
+  var sel = document.getElementById("wWhere");
+  Object.keys(WHERE).forEach(function (k) { sel.insertAdjacentHTML("beforeend", '<option value="' + k + '">' + WHERE[k].label + "</option>"); });
+
+  function renderWish() {
+    var chips = '<button type="button" class="chip" data-f="all" aria-pressed="' + (filter === "all") + '">전체 ' + wish.length + "</button>";
+    Object.keys(WHERE).forEach(function (k) {
+      var n = wish.filter(function (w) { return w.where === k; }).length;
+      if (n) chips += '<button type="button" class="chip" data-f="' + k + '" aria-pressed="' + (filter === k) + '">' + WHERE[k].label + " " + n + "</button>";
+    });
+    document.getElementById("wishChips").innerHTML = chips;
+    var items = wish.filter(function (w) { return filter === "all" || w.where === filter; });
+    var el = document.getElementById("wishList");
+    if (!items.length) { el.innerHTML = '<li class="empty">아직 없어요. 위에서 추가해 보세요.</li>'; return; }
+    el.innerHTML = items.map(function (w) {
+      var W = WHERE[w.where] || WHERE.etc;
+      return '<li class="item' + (w.got ? " got" : "") + '"><input type="checkbox" id="c-' + w.id + '" data-got="' + w.id + '"' + (w.got ? " checked" : "") + ' aria-label="구매 완료">' +
+        '<label for="c-' + w.id + '"><div class="t">' + esc(w.text) + '</div><div class="w">' + esc(W.label) + (W.when ? " · " + esc(W.when) : "") + (w.memo ? " · " + esc(w.memo) : "") + "</div></label>" +
+        '<button class="x" type="button" data-del="' + w.id + '" aria-label="삭제">×</button></li>';
+    }).join("");
+  }
+  document.getElementById("wishForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var t = document.getElementById("wText").value.trim();
+    if (!t) return;
+    wish.push({ id: "w" + Date.now(), text: t, where: sel.value, memo: document.getElementById("wMemo").value.trim(), got: false });
+    lsSet("tak2-wish", wish);
+    e.target.reset();
+    renderWish();
+  });
+  document.getElementById("v-wish").addEventListener("click", function (e) {
+    var f = e.target.closest ? e.target.closest("[data-f]") : null;
+    var d = e.target.closest ? e.target.closest("[data-del]") : null;
+    if (f) { filter = f.getAttribute("data-f"); renderWish(); }
+    if (d) { var id = d.getAttribute("data-del"); wish = wish.filter(function (w) { return w.id !== id; }); lsSet("tak2-wish", wish); renderWish(); }
+  });
+  document.getElementById("v-wish").addEventListener("change", function (e) {
+    var g = e.target.closest ? e.target.closest("[data-got]") : null;
+    if (!g) return;
+    var id = g.getAttribute("data-got");
+    wish.forEach(function (w) { if (w.id === id) w.got = g.checked; });
+    lsSet("tak2-wish", wish);
+    renderWish();
+  });
+
+  /* 쿠폰·티켓 */
+  var couponSeed = [
+    { id: "k1", title: "면세 10% + 최대 7% 할인", where: "돈키호테 다카마쓰 마루가메초 점", date: "",
+      memo: "¥10,000 이상(세별도) 구매 시 5%, ¥30,000 이상 시 7% 추가. 쿠폰 페이지의 QR을 열어 바코드를 보여줘요. 여권 지참. 조건은 방문 전 다시 확인하세요.",
+      link: "https://livejapan.com/en/in-tokyo/in-pref-tokyo/in-mount_takao/spot-lj0145192/coupon/", used: false },
+    { id: "k2", title: "이케다행 페리 왕복권 ¥1,330", where: "국제 료비 페리 (다카마쓰 ⇄ 이케다)", date: "2026-11-26",
+      memo: "편도 ¥700 두 번(¥1,400)보다 ¥70 싸요. 왕복권 한 장으로 두 번 타요. 창구·발권기 모두 카드·IC 결제가 돼요.",
+      link: "https://ryobi-shodoshima.jp/timetable/timetable_takamatsu/", used: false },
+    { id: "k3", title: "리쓰린 야간 와선 ¥850", where: "리쓰린 공원 남호", date: "2026-11-26",
+      memo: "17:30부터 15분 간격 11편(막배 20:00). 웹 예약은 전날까지, 당일 예약 불가 — 잔여석은 매표소에서 현장 판매. 입장료 ¥500은 별도.",
+      link: "https://www.my-kagawa.jp/ritsuringarden/wasen/reserve", used: false }
+  ];
+  var coupons = lsGet("tak2-coupons", couponSeed);
+  function renderCoupons() {
+    var el = document.getElementById("couponList");
+    if (!coupons.length) { el.innerHTML = '<li class="empty">쿠폰이 없어요.</li>'; return; }
+    el.innerHTML = coupons.map(function (c) {
+      return '<li class="ticket' + (c.used ? " used" : "") + '"><div class="main"><div class="where">' + esc(c.where || "") + '</div><div class="big">' + esc(c.title) + "</div>" +
+        (c.memo ? "<p>" + esc(c.memo) + "</p>" : "") +
+        (c.link ? '<p><a href="' + esc(c.link) + '" target="_blank" rel="noopener">출처·예약 열기</a></p>' : "") + "</div>" +
+        '<div class="stub"><span>' + (c.date ? "기한 " + esc(c.date.replace(/-/g, ".")) : "기한 없음") + '</span><span><button type="button" class="chip" data-use="' + c.id + '" aria-pressed="' + !!c.used + '">' + (c.used ? "사용함" : "사용 체크") + '</button> <button type="button" class="x" data-cdel="' + c.id + '" aria-label="삭제">×</button></span></div></li>';
+    }).join("");
+  }
+  document.getElementById("v-coupon").addEventListener("click", function (e) {
+    var u = e.target.closest ? e.target.closest("[data-use]") : null;
+    var d = e.target.closest ? e.target.closest("[data-cdel]") : null;
+    if (u) { var id = u.getAttribute("data-use"); coupons.forEach(function (c) { if (c.id === id) c.used = !c.used; }); lsSet("tak2-coupons", coupons); renderCoupons(); }
+    if (d) { var did = d.getAttribute("data-cdel"); coupons = coupons.filter(function (c) { return c.id !== did; }); lsSet("tak2-coupons", coupons); renderCoupons(); }
+  });
+  document.getElementById("couponForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var t = document.getElementById("cTitle").value.trim();
+    if (!t) return;
+    coupons.push({ id: "k" + Date.now(), title: t, where: document.getElementById("cWhere").value.trim(), date: document.getElementById("cDate").value,
+      memo: document.getElementById("cMemo").value.trim(), link: "", used: false });
+    lsSet("tak2-coupons", coupons);
+    e.target.reset();
+    renderCoupons();
+  });
+
+  /* 준비물 체크 */
+  var PREP_SEED = [
+    { id: "p1", text: "여권 · 항공권 예약 확인", memo: "면세·체크인에 계속 써요" },
+    { id: "p2", text: "비짓재팬웹 QR 저장", memo: "스크린샷도 하나" },
+    { id: "p3", text: "동전지갑", memo: "동전이 진짜 많이 나와요" },
+    { id: "p4", text: "현금 ¥10,000 내외", memo: "우동집·섬 버스" },
+    { id: "p5", text: "보조배터리 · 충전 케이블", memo: "지도·사진으로 하루 종일 써요" },
+    { id: "p6", text: "접이식 우산", memo: "11월 하순 가가와 비 잦아요" },
+    { id: "p7", text: "편한 운동화", memo: "리쓰린·섬 언덕" },
+    { id: "p8", text: "에어서울 앱 설치", memo: "온라인 체크인·탑승권" }
+  ];
+  var prep = lsGet("tak2-prep", {});
+  function renderPrep() {
+    var el = document.getElementById("prepList");
+    el.innerHTML = PREP_SEED.map(function (p) {
+      var got = !!prep[p.id];
+      return '<li class="item' + (got ? " got" : "") + '"><input type="checkbox" id="prep-' + p.id + '" data-prep="' + p.id + '"' + (got ? " checked" : "") + ' aria-label="' + esc(p.text) + '">' +
+        '<label for="prep-' + p.id + '"><div class="t">' + esc(p.text) + '</div><div class="w">' + esc(p.memo) + "</div></label><span></span></li>";
+    }).join("");
+  }
+  document.getElementById("v-prep").addEventListener("change", function (e) {
+    var c = e.target.closest ? e.target.closest("[data-prep]") : null;
+    if (!c) return;
+    prep[c.getAttribute("data-prep")] = c.checked ? 1 : 0;
+    lsSet("tak2-prep", prep);
+    renderPrep();
+  });
+
+  /* 일본어 한마디 */
+  var PHRASES = [
+    { jp: "池田港までの往復切符を2枚ください。", ko: "이케다항 왕복권 두 장 주세요", tag: "페리" },
+    { jp: "大人2枚でお願いします。", ko: "어른 두 명이요 (입장권·승선권)", tag: "티켓" },
+    { jp: "かけうどんの小をひとつ、お願いします。", ko: "가케 우동 소 하나 주세요", tag: "우동" },
+    { jp: "お会計をお願いします。", ko: "계산해 주세요", tag: "식당" },
+    { jp: "栗林公園の東門まで、お願いします。", ko: "리쓰린 공원 동문까지 가 주세요", tag: "택시", big: true },
+    { jp: "高松港のフェリーターミナルまで、お願いします。", ko: "다카마쓰항 페리 터미널까지 가 주세요", tag: "택시", big: true },
+    { jp: "小豆島オリーブ公園まで、お願いします。", ko: "쇼도시마 올리브 공원까지 가 주세요", tag: "택시", big: true },
+    { jp: "免税でお願いします。", ko: "면세로 해 주세요", tag: "쇼핑" },
+    { jp: "カードは使えますか？", ko: "카드 되나요?", tag: "결제" },
+    { jp: "骨付鳥の親をひとつ、ひなをひとつください。", ko: "뼈닭 오야 하나, 히나 하나 주세요", tag: "식당" },
+    { jp: "写真を撮ってもらえますか？", ko: "사진 좀 찍어 주실 수 있어요?", tag: "기타" }
+  ];
+  function renderPhrases() {
+    document.getElementById("phraseList").innerHTML = PHRASES.map(function (p, i) {
+      return '<div class="phr"><span class="tag2">' + esc(p.tag) + '</span><div class="jp2">' + esc(p.jp) + '</div><div class="ko2">' + esc(p.ko) + '</div>' +
+        '<div class="pbtns"><button type="button" data-copy="' + i + '">복사</button>' +
+        (p.big ? '<button type="button" data-big="' + i + '">크게 보기</button>' : "") + '</div></div>';
+    }).join("");
+  }
+  function copyText(txt, btn) {
+    function ok() { if (!btn) return; btn.classList.add("copied"); btn.textContent = "복사됨!"; setTimeout(function () { btn.classList.remove("copied"); btn.textContent = "복사"; }, 1400); }
+    function fallback() {
+      var ta = document.createElement("textarea");
+      ta.value = txt; ta.setAttribute("readonly", "");
+      ta.style.position = "fixed"; ta.style.top = "-1000px";
+      document.body.appendChild(ta); ta.select();
+      var okk = false;
+      try { okk = document.execCommand("copy"); } catch (err) { okk = false; }
+      document.body.removeChild(ta);
+      if (okk) ok(); else if (btn) { btn.textContent = "길게 눌러 복사"; setTimeout(function () { btn.textContent = "복사"; }, 1600); }
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(txt).then(ok, fallback);
+    } else { fallback(); }
+  }
+  document.getElementById("v-prep").addEventListener("click", function (e) {
+    var c = e.target.closest ? e.target.closest("[data-copy]") : null;
+    var b = e.target.closest ? e.target.closest("[data-big]") : null;
+    if (c) { copyText(PHRASES[+c.getAttribute("data-copy")].jp, c); return; }
+    if (b) {
+      var p = PHRASES[+b.getAttribute("data-big")];
+      document.getElementById("bigJp").textContent = p.jp;
+      document.getElementById("bigKo").textContent = p.ko;
+      document.getElementById("bigModal").classList.add("on");
+    }
+  });
+  document.getElementById("bigClose").addEventListener("click", function () {
+    document.getElementById("bigModal").classList.remove("on");
+  });
+  document.getElementById("bigModal").addEventListener("click", function (e) {
+    if (e.target && e.target.id === "bigModal") document.getElementById("bigModal").classList.remove("on");
+  });
+
+  /* 탭 라우팅 */
+  var VIEWS = ["route", "wish", "coupon", "prep"];
+  function show() {
+    var h = (location.hash || "#route").slice(1);
+    if (VIEWS.indexOf(h) < 0) h = "route";
+    VIEWS.forEach(function (k) { document.getElementById("v-" + k).classList.toggle("on", k === h); });
+    Array.prototype.forEach.call(document.querySelectorAll("nav.tabs a"), function (a) {
+      if (a.getAttribute("data-tab") === h) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+    });
+    if (pendingJump) { doJump(); } else { window.scrollTo(0, 0); }
+  }
+
+  window.addEventListener("hashchange", show);
+  renderRoute(); renderWish(); renderCoupons(); renderPrep(); renderPhrases(); show();
+})();
+</script>
+</body>
+</html>
