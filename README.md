@@ -29,7 +29,7 @@ robots.txt
 |---|---|
 | `hero-takamatsu.jpg` | 맨 위 큰 사진 (밤의 다카마쓰역) |
 | `arcade-marugamemachi.jpg` | 마루가메마치 상점가 |
-| `kotoden-takamatsuchikko.jpg` | 고토덴 온천 패스 |
+| `kotoden-chikko.jpg` | 고토덴 온천 패스 |
 | `busshozan-station.jpg` | 붓쇼잔 온천 |
 | `takamatsu-night.jpg` | 밤 섹션 |
 | `ritsuring-day.jpg` | 리쓰린 야간 일정 카드 |
