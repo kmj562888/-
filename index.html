@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#FAF7F2">
+<meta name="theme-color" content="#FFFDF9">
 <title>Ji입니다만 — TAKAMATSU, JAPAN · 2026.11.26—11.27</title>
 <meta name="description" content="여행하고, 먹고, 기록하는 지의 일상. 2026년 11월 다카마쓰 1박 2일 — 시내와 붓쇼잔 온천의 기록.">
 <meta property="og:type" content="article">
@@ -14,11 +14,11 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%239E332B'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='30' fill='%23FAF7F2' text-anchor='middle'%3EJi%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=Noto+Serif+JP:wght@300;400;500&amp;family=Noto+Sans+KR:wght@300;400;500;600&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&amp;family=Gowun+Dodum&amp;family=Zen+Maru+Gothic:wght@400;500;700&amp;family=Noto+Sans+JP:wght@400;500&amp;display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <script>document.documentElement.classList.add("js");</script>
-<link rel="stylesheet" href="assets/style.css?v=20261121b">
-<script defer src="assets/main.js?v=20261121a"></script>
+<link rel="stylesheet" href="assets/style.css?v=20261121c">
+<script defer src="assets/main.js?v=20261121b"></script>
 </head>
 <body>
 
@@ -33,7 +33,6 @@
       <a href="#travel">Travel</a>
       <a href="#food">Food</a>
       <a href="#daily">Daily</a>
-      <a href="#about">About</a>
     </nav>
   </div>
 </header>
@@ -44,6 +43,7 @@
          srcset="images/hero-takamatsu-700.jpg 700w, images/hero-takamatsu.jpg 2000w"
          sizes="100vw" width="2000" height="1506" fetchpriority="high" decoding="async"
          alt="밤의 다카마쓰역. 유리로 된 역사와 광장, 버스 정류장에 불이 켜져 있다.">
+    <span class="hero-sticker"><img src="images/chii-pair.png" alt="" aria-hidden="true" width="300" height="196" decoding="async"></span>
   </div>
   <div class="hero-top">
     <span>Issue 01 — Setouchi</span>
@@ -113,18 +113,24 @@
         <span>Itinerary — 2 days</span>
       </div>
 
-      <div class="daytabs reveal" role="tablist" aria-label="일자별 일정">
-        <button class="daytab" id="tab-day1" role="tab" aria-selected="true" aria-controls="day1" type="button">
+      <nav class="dayjumps reveal" aria-label="일자별 바로가기">
+        <a class="daytab" href="#day1">
           <span class="n">01</span><span class="d">Day 01</span><span class="s">11.26 Thu · City &amp; Onsen</span>
-        </button>
-        <button class="daytab" id="tab-day2" role="tab" aria-selected="false" aria-controls="day2" type="button">
+          <img class="daytab-chara" src="images/chii-hachiware.png" alt="" aria-hidden="true" width="254" height="300" loading="lazy" decoding="async">
+        </a>
+        <a class="daytab daytab--2" href="#day2">
           <span class="n">02</span><span class="d">Day 02</span><span class="s">11.27 Fri · Slow Morning</span>
-        </button>
-      </div>
+          <img class="daytab-chara" src="images/chii-chiikawa.png" alt="" aria-hidden="true" width="264" height="300" loading="lazy" decoding="async">
+        </a>
+      </nav>
 
       <!-- ---------- DAY 1 ---------- -->
-      <div class="day-panel" id="day1" role="tabpanel" aria-labelledby="tab-day1" tabindex="0">
-        <p class="day-lead">공항에서 버스로, 버스에서 아케이드로. 오늘의 목적지는 시내와 온천 하나.</p>
+      <section class="day-panel" id="day1" aria-labelledby="day1-title">
+        <div class="day-head">
+          <p class="day-kicker">Day 01 · 11.26 Thu</p>
+          <h3 class="day-title" id="day1-title">시내와 온천<span class="en">City &amp; Onsen</span></h3>
+          <p class="day-lead">공항에서 버스로, 버스에서 아케이드로. 오늘의 목적지는 시내와 온천 하나.</p>
+        </div>
 
         <article class="stop stop--text">
           <div class="stop-time"><span class="t">10:30</span><span class="idx">01</span></div>
@@ -443,11 +449,15 @@
           <p>Day 01 전체 경로 — 공항 · 高松駅 · 마루가메마치 · 우동보 · 瓦町 · 붓쇼잔 온천 · 리쓰린 · 잇카쿠 · 효고마치 <span class="route-note">지도는 순서만 확인하는 용도</span></p>
           <a class="btn btn--sm" href="https://www.google.com/maps/dir/?api=1&amp;origin=Takamatsu%20Airport%2C%20Kagawa%2C%20Japan&amp;destination=JR%20Clement%20Inn%20Takamatsu%20Hyogomachi%2C%20Takamatsu%2C%20Japan&amp;waypoints=Takamatsu%20Station%2C%20Kagawa%2C%20Japan%7CDon%20Quijote%20Takamatsu%20Marugamecho%2C%20Takamatsu%2C%20Japan%7CPokemon%20Center%20Kagawa%2C%20Takamatsu%2C%20Japan%7CUdon%20Bou%20Takamatsu%2C%20Kagawa%2C%20Japan%7CKawaramachi%20Station%2C%20Takamatsu%2C%20Japan%7CBusshozan%20Onsen%20Tenpyoyu%2C%20Takamatsu%2C%20Japan%7CRitsurin%20Garden%2C%20Takamatsu%2C%20Japan%7C%E4%B8%80%E9%B6%B4%20%E9%AB%98%E6%9D%BE%E5%BA%97" target="_blank" rel="noopener noreferrer">Google Maps에서 열기 ↗</a>
         </div>
-      </div>
+      </section>
 
       <!-- ---------- DAY 2 ---------- -->
-      <div class="day-panel" id="day2" role="tabpanel" aria-labelledby="tab-day2" tabindex="0" hidden>
-        <p class="day-lead">일부러 늦게 시작하는 아침. 어제 밤에 본 정원을 낮에 다시 본다.</p>
+      <section class="day-panel day-panel--2" id="day2" aria-labelledby="day2-title">
+        <div class="day-head">
+          <p class="day-kicker">Day 02 · 11.27 Fri</p>
+          <h3 class="day-title" id="day2-title">느린 아침<span class="en">Slow Morning</span></h3>
+          <p class="day-lead">일부러 늦게 시작하는 아침. 어제 밤에 본 정원을 낮에 다시 본다.</p>
+        </div>
 
         <article class="stop stop--text">
           <div class="stop-time"><span class="t">07:30</span><span class="idx">01</span></div>
@@ -613,7 +623,7 @@
           <p>Day 02 전체 경로 — 바카이치다이 · 리쓰린 · 기쿠게쓰테이 · 우에하라야 · 공항 <span class="route-note">지도는 순서만 확인하는 용도</span></p>
           <a class="btn btn--sm" href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%20Clement%20Inn%20Takamatsu%20Hyogomachi%2C%20Takamatsu%2C%20Kagawa%2C%20Japan&amp;destination=Takamatsu%20Airport%2C%20Kagawa%2C%20Japan&amp;waypoints=Udon%20Baka%20Ichidai%2C%20Takamatsu%2C%20Kagawa%2C%20Japan%7CRitsurin%20Garden%2C%20Takamatsu%2C%20Kagawa%2C%20Japan%7CKikugetsutei%2C%20Takamatsu%2C%20Kagawa%2C%20Japan%7CSanuki%20Udon%20Ueharaya%2C%20Takamatsu%2C%20Kagawa%2C%20Japan" target="_blank" rel="noopener noreferrer">Google Maps에서 열기 ↗</a>
         </div>
-      </div>
+      </section>
 
       </div>
 
@@ -926,73 +936,54 @@
     </div>
   </section>
 
-  <!-- ================= ABOUT ================= -->
-  <section class="sec" id="about">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <p class="kicker">05 — About</p>
-        <h2><span class="h-latin">Ji</span>입니다만</h2>
-        <p class="side">여행하고, 먹고, 기록하는 <br>지의 일상</p>
-      </div>
-
-      <div class="about">
-        <div class="reveal">
-          <p class="lede">여행하고, 먹고, 기록하는 지의 일상.</p>
-          <div class="prose">
-            <p>한 번의 여행을 한 호(issue)로 묶는다. 일정과 사진, 그리고 돌아와서 쓴 후기를 한곳에 남긴다. 첫 호는 2026년 11월의 다카마쓰.</p>
-            <p>일정은 이번에 걸을 동선을 그대로 옮겼다. 전철 시각과 가게 영업시간은 그날 기준이고, 라이트업처럼 기간이 정해진 것은 날짜를 함께 적어두었다.</p>
-            <p>사진은 Wikimedia Commons의 자유 라이선스 사진을 쓴다. 직접 찍은 사진으로 바꾸려면 <code>images/</code> 폴더의 같은 이름 파일을 덮어쓰면 된다. 자세한 방법은 README에 적어두었다.</p>
-          </div>
-        </div>
-        <figure class="about-fig reveal">
-          <div class="frame">
-            <img src="images/takamatsu-castle.jpg"
-                 srcset="images/takamatsu-castle-700.jpg 700w, images/takamatsu-castle.jpg 1100w"
-                 sizes="(max-width:860px) 90vw, 460px" width="1100" height="733" loading="lazy" decoding="async"
-                 alt="다카마쓰성 해자. 돌벽 위로 소나무가 자라고 물에 성벽이 비친다.">
-          </div>
-          <figcaption>다카마쓰성, 다마모 공원. 다음에.</figcaption>
-        </figure>
-      </div>
-
-      <details class="credits">
-        <summary>Photo credits — 14 photographs</summary>
-        <ul>
-          <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Seto_Inland_Sea_view.jpg" target="_blank" rel="noopener noreferrer">Seto Inland Sea view</a> — Japanexperterna.se </span><span class="lic">CC BY-SA 3.0</span></li>
-          <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Takamatsu-chikko_st02s3200.jpg" target="_blank" rel="noopener noreferrer">Takamatsu-chikko Station</a> — 663highland </span><span class="lic">CC BY 2.5</span></li>
-          <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:KD-Bussh%C5%8Dzan_Station-Building.jpg" target="_blank" rel="noopener noreferrer">Busshōzan Station</a> — ButuCC </span><span class="lic">CC0</span></li>
-          <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Night_in_Port_of_Takamatsu_20170401.jpg" target="_blank" rel="noopener noreferrer">Night in Port of Takamatsu</a> — 翁維德 (Wei-Te Wong) </span><span class="lic">CC BY-SA 2.0</span></li>
-          <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Ritsurin_Garden,_Takamatsu_3-27_(25962860194).jpg" target="_blank" rel="noopener noreferrer">Ritsurin Garden</a> — KimonBerlin </span><span class="lic">CC BY-SA 2.0</span></li>
-          <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Ritsurin_park03s3200.jpg" target="_blank" rel="noopener noreferrer">Ritsurin Park, lawn</a> — 663highland </span><span class="lic">CC BY 2.5</span></li>
-          <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Ritsurin_garden_kikugetsutei.jpg" target="_blank" rel="noopener noreferrer">Kikugetsutei</a> — ブルーノ・プラス </span><span class="lic">CC BY-SA 4.0</span></li>
-          <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Kama-age_sanuki_udon_by_sekido_in_Takamatsu,_Kagawa.jpg" target="_blank" rel="noopener noreferrer">Kama-age sanuki udon</a> — sekido </span><span class="lic">CC BY 2.0</span></li>
-          <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Japanese_Sanuki_Udon.jpg" target="_blank" rel="noopener noreferrer">Sanuki udon</a> — Shene81 </span><span class="lic">CC BY 3.0</span></li>
-          <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Honetsukidori_Marugame.JPG" target="_blank" rel="noopener noreferrer">Honetsukidori</a> — ja:User:Sanjo </span><span class="lic">CC BY-SA 3.0</span></li>
-          <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Marugame-machi_shopping_mall.jpg" target="_blank" rel="noopener noreferrer">Marugame-machi shopping arcade</a> — ラハール </span><span class="lic">Public domain</span></li>
-          <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Takamatsu_Station_(Kagawa)_20240327_(night).jpg" target="_blank" rel="noopener noreferrer">Takamatsu Station at night</a> — Shogo1999 </span><span class="lic">CC BY-SA 4.0</span></li>
-          <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:%E9%AB%98%E6%9D%BE%E7%A9%BA%E6%B8%AF_%E5%85%A8%E6%99%AF.jpg" target="_blank" rel="noopener noreferrer">Takamatsu Airport</a> — Yutaaka0804 </span><span class="lic">CC0</span></li>
-          <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Takamatsu_Castle_(Sanuki)_20170609-3.jpg" target="_blank" rel="noopener noreferrer">Takamatsu Castle</a> — Suicasmo </span><span class="lic">CC BY-SA 4.0</span></li>
-        </ul>
-        <p class="more">사진은 원본을 자르지 않고 크기만 줄여 사용했다. 라이선스 원문은 각 링크에서 확인할 수 있다. 사진 설명에 (이미지)라고 적은 것은 그 가게에서 찍은 사진이 아니라 같은 음식의 예시 사진이라는 뜻이다.</p>
-      </details>
-    </div>
-  </section>
-
 </main>
 
 <footer class="foot">
   <div class="wrap">
-    <div>
+    <div class="foot-id">
       <span class="brand"><span class="ji">Ji</span><span class="ko">입니다만</span></span>
       <p class="slogan">여행하고, 먹고, 기록하는 지의 일상</p>
+      <img class="foot-chara" src="images/chii-hachiware-book.png" alt="" aria-hidden="true" width="266" height="300" loading="lazy" decoding="async">
     </div>
+    <figure class="foot-pol">
+      <div class="frame">
+        <img src="images/takamatsu-castle.jpg"
+             srcset="images/takamatsu-castle-700.jpg 700w, images/takamatsu-castle.jpg 1100w"
+             sizes="170px" width="1100" height="733" loading="lazy" decoding="async"
+             alt="다카마쓰성 해자. 돌벽 위로 소나무가 자라고 물에 성벽이 비친다.">
+      </div>
+      <figcaption>다카마쓰성, 다마모 공원. 다음에.</figcaption>
+    </figure>
     <a class="top-link" href="#top">Back to top ↑</a>
-    <p class="fine">Issue 01 — Takamatsu, Kagawa. 2026.11.26—27. Last updated 2026.11.21.<br>사진 © 각 촬영자, Wikimedia Commons (CC). 이 페이지는 개인 여행 기록이며 예약 정보를 담고 있지 않습니다.</p>
+    <p class="fine">
+      Issue 01 — Takamatsu, Kagawa. 2026.11.26—27 · Last updated 2026.11.21<br>
+      사진 © 각 촬영자, Wikimedia Commons (CC BY / CC BY-SA / CC0) · 이 페이지는 개인 여행 기록이며 예약 정보를 담고 있지 않습니다.
+    </p>
+    <details class="credits">
+      <summary>Photo credits — 14 photographs</summary>
+      <ul>
+      <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Seto_Inland_Sea_view.jpg" target="_blank" rel="noopener noreferrer">Seto Inland Sea view</a> — Japanexperterna.se </span><span class="lic">CC BY-SA 3.0</span></li>
+      <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Takamatsu-chikko_st02s3200.jpg" target="_blank" rel="noopener noreferrer">Takamatsu-chikko Station</a> — 663highland </span><span class="lic">CC BY 2.5</span></li>
+      <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:KD-Bussh%C5%8Dzan_Station-Building.jpg" target="_blank" rel="noopener noreferrer">Busshōzan Station</a> — ButuCC </span><span class="lic">CC0</span></li>
+      <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Night_in_Port_of_Takamatsu_20170401.jpg" target="_blank" rel="noopener noreferrer">Night in Port of Takamatsu</a> — 翁維德 (Wei-Te Wong) </span><span class="lic">CC BY-SA 2.0</span></li>
+      <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Ritsurin_Garden,_Takamatsu_3-27_(25962860194).jpg" target="_blank" rel="noopener noreferrer">Ritsurin Garden</a> — KimonBerlin </span><span class="lic">CC BY-SA 2.0</span></li>
+      <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Ritsurin_park03s3200.jpg" target="_blank" rel="noopener noreferrer">Ritsurin Park, lawn</a> — 663highland </span><span class="lic">CC BY 2.5</span></li>
+      <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Ritsurin_garden_kikugetsutei.jpg" target="_blank" rel="noopener noreferrer">Kikugetsutei</a> — ブルーノ・プラス </span><span class="lic">CC BY-SA 4.0</span></li>
+      <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Kama-age_sanuki_udon_by_sekido_in_Takamatsu,_Kagawa.jpg" target="_blank" rel="noopener noreferrer">Kama-age sanuki udon</a> — sekido </span><span class="lic">CC BY 2.0</span></li>
+      <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Japanese_Sanuki_Udon.jpg" target="_blank" rel="noopener noreferrer">Sanuki udon</a> — Shene81 </span><span class="lic">CC BY 3.0</span></li>
+      <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Honetsukidori_Marugame.JPG" target="_blank" rel="noopener noreferrer">Honetsukidori</a> — ja:User:Sanjo </span><span class="lic">CC BY-SA 3.0</span></li>
+      <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Marugame-machi_shopping_mall.jpg" target="_blank" rel="noopener noreferrer">Marugame-machi shopping arcade</a> — ラハール </span><span class="lic">Public domain</span></li>
+      <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Takamatsu_Station_(Kagawa)_20240327_(night).jpg" target="_blank" rel="noopener noreferrer">Takamatsu Station at night</a> — Shogo1999 </span><span class="lic">CC BY-SA 4.0</span></li>
+      <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:%E9%AB%98%E6%9D%BE%E7%A9%BA%E6%B8%AF_%E5%85%A8%E6%99%AF.jpg" target="_blank" rel="noopener noreferrer">Takamatsu Airport</a> — Yutaaka0804 </span><span class="lic">CC0</span></li>
+      <li><span class="c"><a href="https://commons.wikimedia.org/wiki/File:Takamatsu_Castle_(Sanuki)_20170609-3.jpg" target="_blank" rel="noopener noreferrer">Takamatsu Castle</a> — Suicasmo </span><span class="lic">CC BY-SA 4.0</span></li>
+      </ul>
+      <p class="more">사진은 원본을 자르지 않고 크기만 줄여 사용했다. 라이선스 원문은 각 링크에서 확인할 수 있다. 사진 설명에 (이미지)라고 적은 것은 그 가게에서 찍은 사진이 아니라 같은 음식의 예시 사진이라는 뜻이다.</p>
+    </details>
   </div>
 </footer>
 
 <noscript>
-  <style>.day-panel[hidden]{display:block !important}.reveal{opacity:1 !important;transform:none !important}</style>
+  <style>.reveal{opacity:1 !important;transform:none !important}</style>
 </noscript>
 
 </body>

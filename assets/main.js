@@ -1,5 +1,5 @@
 /* Ji입니다만 — Issue 01, Takamatsu
-   Tabs · scroll reveals · checklist · budget · trip notes
+   Day jump links · scroll reveals · checklist · budget · trip notes
    All user data stays in this browser (localStorage). */
 
 (function () {
@@ -54,39 +54,6 @@
   } else {
     revealEls.forEach(function (el) { el.classList.add('is-in'); });
   }
-
-  /* ---------------- day tabs ---------------- */
-
-  var tabs = $$('.daytab');
-  var panels = tabs.map(function (tab) { return document.getElementById(tab.getAttribute('aria-controls')); });
-
-  function selectTab(index, focus) {
-    tabs.forEach(function (tab, i) {
-      var on = i === index;
-      tab.setAttribute('aria-selected', on ? 'true' : 'false');
-      tab.setAttribute('tabindex', on ? '0' : '-1');
-      if (panels[i]) panels[i].hidden = !on;
-    });
-    if (focus && tabs[index]) tabs[index].focus();
-  }
-
-  tabs.forEach(function (tab, i) {
-    tab.addEventListener('click', function () { selectTab(i); });
-    tab.addEventListener('keydown', function (event) {
-      var last = tabs.length - 1;
-      var next = null;
-      if (event.key === 'ArrowRight') next = i === last ? 0 : i + 1;
-      if (event.key === 'ArrowLeft') next = i === 0 ? last : i - 1;
-      if (event.key === 'Home') next = 0;
-      if (event.key === 'End') next = last;
-      if (next !== null) {
-        event.preventDefault();
-        selectTab(next, true);
-      }
-    });
-  });
-
-  if (tabs.length) selectTab(0);
 
   /* ---------------- nav highlight ---------------- */
 
