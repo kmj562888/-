@@ -39,15 +39,19 @@ robots.txt
 | `honetsuki.jpg` | 잇카쿠 |
 | `seto-inland-sea.jpg` | 프롤로그 |
 | `airport.jpg` | 공항 |
-| `takamatsu-castle.jpg` | ABOUT |
+| `takamatsu-castle.jpg` | 맨 아래 푸터의 폴라로이드 |
 
 - 가로 1400~2000px, JPEG 품질 80 정도면 충분합니다. 휴대폰 사진은 그대로 올리면 5MB를 넘기니 줄여서 넣는 편이 좋습니다.
 - `-700.jpg`가 붙은 파일은 휴대폰용 작은 사본입니다. 큰 파일을 바꿨다면 작은 사본도 같은 내용으로 다시 만들어 주면 좋습니다(없어도 큰 파일이 대신 쓰입니다).
-- 사진을 바꾸면 ABOUT의 ‘Photo credits’에서 해당 사진 설명을 지우거나 내 사진이라고 적어 주세요.
+- 사진을 바꾸면 페이지 맨 아래 ‘Photo credits’에서 해당 사진 설명을 지우거나 내 사진이라고 적어 주세요.
 
 `assets/style.css`나 `assets/main.js`를 고쳤는데 화면이 그대로라면, `index.html` 위쪽의 `assets/style.css?v=...` / `assets/main.js?v=...`에서 `v=` 뒤의 값을 다른 글자로 바꿔 주세요. 브라우저가 예전 파일을 기억하고 있을 때 새로 받아오게 하는 표시입니다.
 
 ### 2. 일정·문구 고치기
+
+### 2-1. 일정(Day 1 · Day 2)
+
+Day 1(`#day1`)과 Day 2(`#day2`)는 탭이 아니라 각각 따로 펼쳐진 큰 섹션입니다. 위쪽 `Day 01` · `Day 02` 카드는 누르면 그 자리로 부드럽게 이동하는 바로가기 링크입니다(`<a href="#day1">`). 두 날 모두 지도에 그대로 보이니, 순서를 바꾸려면 섹션째로 옮기면 됩니다.
 
 `index.html` 안에서 `<article class="stop">` 하나가 일정 한 칸입니다.
 
@@ -108,9 +112,13 @@ python3 -m http.server 8000
 `Source: Deploy from a branch` · `Branch: main` · `Folder: / (root)`를 고르고 **Save**.
 1~2분 뒤 `https://kmj562888.github.io/-/` 가 열립니다. 주소가 `-`라서 보기 좋지 않으면 저장소 이름을 `takamatsu` 등으로 바꾸면 주소도 함께 바뀝니다.
 
+## 캐릭터 스티커
+
+`images/chii-*.png` 네 장(히어로 배지 · Day 1 · Day 2 · 푸터)은 치이카와 캐릭터 이미지입니다. 캐릭터와 이름의 권리는 원작자 나가노(ナガノ)와 각 권리자에게 있고, 이 페이지는 개인 여행 기록(검색 비노출) 용도로만 쓰고 있습니다. 상업적으로 쓰거나 공개 범위를 넓힐 때는 권리자의 허락이 필요합니다. 스티커를 빼려면 `index.html`의 `<img class="hero-sticker">`, `<img class="daytab-chara">`(두 곳), `<img class="foot-chara">`를 지우면 됩니다.
+
 ## 사진 출처
 
-Wikimedia Commons의 자유 라이선스 사진을 크기만 줄여 사용했습니다(EXIF 제거). 원본과 라이선스는 페이지 하단 ABOUT의 ‘Photo credits’에 링크해 두었습니다.
+Wikimedia Commons의 자유 라이선스 사진을 크기만 줄여 사용했습니다(EXIF 제거). 원본과 라이선스는 페이지 맨 아래 푸터의 ‘Photo credits’를 펼치면 링크로 있습니다.
 
 - CC BY / CC BY-SA 사진은 출처와 라이선스를 표시해야 합니다. 사진을 바꿀 때 이 목록도 함께 정리해 주세요.
 - (이미지)라고 적은 사진은 그 가게에서 찍은 것이 아니라 같은 음식의 예시 사진입니다.
