@@ -816,6 +816,62 @@ figcaption{
 
 /* ---------- responsive ---------- */
 
+/* =========================================================
+   Pastel stationery decorations — CSS only (share version)
+   These replace the character stickers on the image-free page.
+   ========================================================= */
+
+/* hero sticker label */
+.hero-deco{
+  position:absolute;top:12px;left:12px;z-index:2;
+  width:92px;height:92px;border-radius:20px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+  background:linear-gradient(165deg,#FFFDF9 0%,#FFFAFB 50%,#FFF1F6 100%);
+  border:2px dashed var(--pink-deep);
+  box-shadow:0 10px 18px -14px rgba(74,59,57,.85), 0 0 0 3px rgba(255,255,255,.85);
+  transform:rotate(-6deg);
+  font-family:var(--round);text-align:center;line-height:1;
+}
+.hero-deco::before{
+  content:"";position:absolute;top:-9px;left:50%;width:46px;height:15px;
+  transform:translateX(-50%) rotate(-7deg);
+  background:repeating-linear-gradient(100deg,rgba(205,232,246,.95) 0 7px,rgba(255,243,196,.95) 7px 14px);
+  border-radius:2px;
+  box-shadow:0 2px 5px -4px rgba(74,59,57,.7);
+}
+.hero-deco-star{font-size:9px;color:var(--butter-deep);line-height:1}
+.hero-deco-heart{font-size:25px;color:var(--pink-deep);line-height:1;margin-top:1px}
+.hero-deco-txt{font-size:6.6px;font-weight:700;letter-spacing:.15em;color:var(--soda-deep);margin-top:2px}
+
+/* day tab heart / star seal */
+.daytab-deco{
+  position:absolute;right:13px;top:50%;transform:translateY(-50%) rotate(6deg);
+  width:36px;height:36px;border-radius:50%;
+  display:grid;place-items:center;
+  background:#FFFDF9;border:1.5px dashed var(--pink-deep);
+  color:var(--pink-deep);font-family:var(--round);font-size:15px;line-height:1;
+  box-shadow:0 4px 8px -6px rgba(74,59,57,.7);
+  pointer-events:none;
+}
+.daytab-deco::before{
+  content:"";position:absolute;top:-6px;left:-5px;width:22px;height:11px;
+  transform:rotate(-16deg);
+  background:repeating-linear-gradient(100deg,rgba(255,214,224,.95) 0 5px,rgba(205,232,246,.95) 5px 10px);
+  border-radius:2px;
+}
+.daytab-deco--2{border-color:var(--soda-deep);color:var(--soda-deep);transform:translateY(-50%) rotate(-6deg)}
+.daytab-deco--2::before{background:repeating-linear-gradient(100deg,rgba(205,232,246,.95) 0 5px,rgba(255,243,196,.95) 5px 10px)}
+
+/* footer washi tape strip */
+.foot-deco{
+  display:inline-flex;align-items:center;margin-top:12px;
+  padding:5px 15px;border-radius:3px;
+  background:repeating-linear-gradient(100deg,rgba(255,243,196,.92) 0 8px,rgba(255,214,224,.88) 8px 16px);
+  box-shadow:0 3px 8px -6px rgba(74,59,57,.7);
+  font-family:var(--round);font-size:10px;letter-spacing:.18em;color:var(--pink-deep);
+  transform:rotate(-3deg);
+}
+
 @media (max-width:1040px){
   .stop{grid-template-columns:66px minmax(0,1fr) 224px}
   .stop--text{grid-template-columns:66px minmax(0,1fr)}
@@ -894,6 +950,15 @@ figcaption{
   .daytab-chara{right:10px;height:40px}
   .hero-sticker{width:64px;height:64px;top:9px;left:9px}
   .foot-chara{height:52px}
+
+  .hero-deco{width:72px;height:72px;top:9px;left:9px;border-radius:16px;gap:1px}
+  .hero-deco::before{width:36px;height:12px;top:-7px}
+  .hero-deco-star{font-size:7.5px}
+  .hero-deco-heart{font-size:19px}
+  .hero-deco-txt{font-size:5.4px;letter-spacing:.12em}
+  .daytab-deco{right:10px;width:32px;height:32px;font-size:13px}
+  .daytab-deco::before{width:19px;height:10px;top:-5px;left:-4px}
+  .foot-deco{font-size:9px;letter-spacing:.14em;padding:4px 12px;margin-top:9px}
 
   .stop{grid-template-columns:1fr;gap:8px;padding:16px}
   .stop--text{grid-template-columns:1fr}
