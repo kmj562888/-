@@ -170,7 +170,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;bac
 }
 /* rubber stamp */
 .hero-media::after{
-  content:"TAKAMATSU";position:absolute;right:14px;bottom:14px;
+  content:"TAKAMATSU";position:absolute;right:14px;top:14px;
   width:82px;height:82px;border-radius:50%;
   display:grid;place-items:center;text-align:center;
   border:2px dashed rgba(242,139,168,.85);
@@ -284,7 +284,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;bac
 }
 .prose p{margin:0 0 14px;font-size:14px;line-height:2;color:var(--body);max-width:38em}
 .prose p:last-child{margin-bottom:0}
-.prose strong{color:var(--ink);font-weight:400;background:linear-gradient(transparent 64%,var(--pink) 64%)}
+.prose strong{color:var(--ink);font-weight:400;background:linear-gradient(transparent 82%,var(--pink) 82%)}
 
 .factlist{
   margin:0;padding:4px 16px;
@@ -425,7 +425,7 @@ figcaption{
 }
 .stop .desc{margin:0 0 12px;font-size:13.5px;line-height:1.95;color:var(--body);max-width:42em}
 .stop--text .desc{max-width:48em}
-.stop .desc strong{color:var(--ink);font-weight:400;background:linear-gradient(transparent 62%,var(--pink) 62%)}
+.stop .desc strong{color:var(--ink);font-weight:400;background:linear-gradient(transparent 82%,var(--pink) 82%)}
 
 .facts{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 12px}
 .facts > div{
@@ -875,7 +875,7 @@ figcaption{
   .hero-top span{padding:4px 9px}
   .hero-media{height:clamp(240px,44svh,360px);border-width:5px;border-radius:22px}
   .hero-media::before{height:20px;width:min(130px,52%);top:7px}
-  .hero-media::after{width:62px;height:62px;font-size:7px;right:9px;bottom:9px}
+  .hero-media::after{width:58px;height:58px;font-size:6.5px;right:8px;top:8px}
   .hero-in{padding:18px 18px 20px;border-radius:22px;margin-top:-26px;width:calc(var(--w) - 10px)}
   .hero h1{font-size:clamp(34px,11vw,48px)}
   .hero-sub{font-size:13.5px}
